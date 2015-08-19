@@ -22,7 +22,18 @@ export default Ember.Component.extend({
       }
     }
 
-    this.set("output", cleanMonthly * 12);
-    return cleanMonthly * 12;
+    var yearly = cleanMonthly * 12;
+    yearly = yearly.toFixed(2);
+
+    this.set("output", yearly);
+
+    //Courtesy of Elias Zamaria
+    function numberWithCommas(x) {
+      var parts = x.toString().split(".");
+      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      return parts.join(".");
+    }
+
+    return numberWithCommas(yearly);
   }.property("monthly")
 });
