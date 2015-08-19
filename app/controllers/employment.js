@@ -5,6 +5,9 @@ export default Ember.Controller.extend({
   name: "",
   salary: "",
   yearly: "",
+  hasCurrentEmployment: function(){
+    return this.get("currentEmployment") != null;
+  }.property("currentEmployment"),
 
   actions: {
     cancel: function(){

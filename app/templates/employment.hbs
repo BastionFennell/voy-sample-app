@@ -12,7 +12,13 @@
       {{input value=salary placeholder="$XX,000" classNames="salary"}}
     </div>
       {{yearly-salary output=yearly monthly=salary}}
-     <button class="save add pull-left" {{action 'save'}}>Add/Save</button>
+      <button class="save add pull-left" {{action 'save'}}>
+        {{#if hasCurrentEmployment}}
+          Save
+        {{else}}
+          Add
+        {{/if}}
+      </button>
      <button class="cancel pull-right" {{action 'cancel'}}>Cancel</button>
   </div>
   <div class="col-sm-6 select-screen">
