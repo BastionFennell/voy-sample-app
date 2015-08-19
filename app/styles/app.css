@@ -1,11 +1,3 @@
-.pull-right {
-  float: right;
-}
-
-.pull-left {
-  float: left;
-}
-
 #header {
   text-align: center;
 }
@@ -35,6 +27,36 @@
   font-size: 20px;
 }
 
+.image-header {
+  background-image: url("images/boat.jpg");
+  text-align: center;
+  height: 200px;
+  background-size: 100%;
+  background-position: 0px 70%;
+}
+
+.image-header-text {
+  color: white;
+  padding-top: 90px;
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 20px;
+  background-color: rgba(0, 0, 0, .5);
+  padding-bottom: 67px;
+}
+
+.filler-text {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.filler-text.even {
+  background-color: lightgreen;
+}
+
+.filler-text p {
+  clear: both;
+}
 
 .page-header {
   text-align: center;
