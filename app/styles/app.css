@@ -12,4 +12,48 @@
 
 .employment {
   clear: both;
+  height: 20px;
+}
+
+#header {
+  text-align: center;
+}
+
+#footer {
+  text-align: center;
+}
+
+.active {
+  background-color: lightgreen;
+}
+
+/*Keep footer at bottom, courtesy of CSSReset.com*/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+#header {
+  padding: 10px;
+  background: lightgreen;
+}
+
+#content {
+  padding-bottom: 50px;
+}
+
+#footer {
+  background: lightgray;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
