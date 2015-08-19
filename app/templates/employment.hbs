@@ -16,7 +16,7 @@
 </div>
 <div class="half select-screen pull-right">
   {{#each model as |employment|}}
-  <div class="employment">
+  <div {{bind-attr class=":employment employment.active:active"}}>
     <div class="name pull-left">{{employment.name}}</div>
     <div class="delete-button pull-right"> <a {{action 'delete' employment}} class="delete">delete</a></div>
     <div class="edit-button pull-right"> <a {{action 'edit' employment}} class="edit">edit</a></div>

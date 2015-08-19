@@ -1,1 +1,22 @@
-{{outlet}}
+<div class="wrapper">
+  <header id="header">
+    <div class="header-links">
+      {{#link-to 'index'}}Home{{/link-to}}
+      | 
+      {{#link-to 'dashboard'}}Dashboard{{/link-to}}
+    </div>
+  </header>
+  <div class="content">
+    {{outlet}}
+  </div>
+  <footer id="footer">
+    <div class="footer-links">
+      {{#link-to 'index'}}Home{{/link-to}}
+      | 
+      {{#link-to 'dashboard'}}Dashboard{{/link-to}}
+    </div>
+    <div class="legal">
+      This app is not intended for real use.
+    </div>
+  </footer>
+</div>
