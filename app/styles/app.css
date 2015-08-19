@@ -6,25 +6,12 @@
   float: left;
 }
 
-.half {
-  width: 50%;
-}
-
-.employment {
-  clear: both;
-  height: 20px;
-}
-
 #header {
   text-align: center;
 }
 
 #footer {
   text-align: center;
-}
-
-.active {
-  background-color: lightgreen;
 }
 
 .logo {
@@ -76,6 +63,17 @@
 .select-screen .delete-button, .select-screen .edit-button, .select-screen .salary {
   padding-left: 5px;
   padding-right: 5px;
+}
+
+.employment {
+  clear: both;
+  height: 30px;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.employment.active {
+  background-color: lightgreen;
 }
 
 /*Keep footer at bottom, courtesy of CSSReset.com*/
