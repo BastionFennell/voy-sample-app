@@ -1,0 +1,131 @@
+#header {
+  text-align: center;
+}
+
+#footer {
+  text-align: center;
+}
+
+.logo {
+  background-image: url("images/buoy.png");
+  width: 100px;
+  height: 100px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.title-words {
+  text-align: left;
+}
+
+.title-words .name h1 {
+  font-weight: bold;
+}
+
+.title-words .tagline h2 {
+  font-style: italic;
+  font-size: 20px;
+}
+
+.image-header {
+  background-image: url("images/boat.jpg");
+  text-align: center;
+  height: 200px;
+  background-size: 100%;
+  background-position: 0px 70%;
+}
+
+.image-header-text {
+  color: white;
+  padding-top: 90px;
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 20px;
+  background-color: rgba(0, 0, 0, .5);
+  padding-bottom: 67px;
+}
+
+.filler-text {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.filler-text.even {
+  background-color: lightgreen;
+}
+
+.filler-text p {
+  clear: both;
+}
+
+.page-header {
+  text-align: center;
+  font-weight: bold;
+}
+
+.finance-table {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.finance-row {
+  clear: both;
+}
+
+
+.edit-screen, .select-screen {
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  height: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.select-screen .delete-button, .select-screen .edit-button, .select-screen .salary {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.select-screen .employment {
+  clear: both;
+  height: 30px;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.employment.active {
+  background-color: lightgreen;
+}
+
+/*Keep footer at bottom, courtesy of CSSReset.com*/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+#header {
+  padding: 10px;
+  background: lightgreen;
+}
+
+#content {
+  padding-bottom: 75px;
+  position: relative;
+}
+
+#footer {
+  background: lightgray;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
