@@ -10,15 +10,16 @@
     Monthly Salary:
     {{input value=salary placeholder="$XX,000" classNames="salary"}}
   </div>
-    {{yearly-salary valueBinding=yearly monthlyBinding=salary}}
-  <button class="add">Add/Save</button>
+    {{yearly-salary output=yearly monthly=salary}}
+   <button class="save add pull-left" {{action 'save'}}>Add/Save</button>
+   <button class="cancel pull-right" {{action 'cancel'}}>Cancel</button>
 </div>
 <div class="half select-screen pull-right">
   {{#each model as |employment|}}
   <div class="employment">
     <div class="name pull-left">{{employment.name}}</div>
-    <div class="delete-button pull-right"> <a {{action 'delete'}} class="delete">delete</a></div>
-    <div class="edit-button pull-right"> <a {{action 'edit'}} class="edit">edit</a></div>
+    <div class="delete-button pull-right"> <a {{action 'delete' employment}} class="delete">delete</a></div>
+    <div class="edit-button pull-right"> <a {{action 'edit' employment}} class="edit">edit</a></div>
     <div class="salary pull-right">{{employment.salary}}</div>
   </div>
   {{/each}}
