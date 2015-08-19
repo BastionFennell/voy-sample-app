@@ -1,26 +1,28 @@
-<div>
+<div class="page-header">
   Employment
 </div>
-<div class="half edit-screen pull-left">
-  <div>
-    Name of income source:
-    {{input value=name placeholder="Feel Good Inc." classNames="name"}}
+<div class="row">
+  <div class="col-sm-6 edit-screen">
+    <div>
+      Name of income source:
+      {{input value=name placeholder="Feel Good Inc." classNames="name"}}
+    </div>
+    <div>
+      Monthly Salary:
+      {{input value=salary placeholder="$XX,000" classNames="salary"}}
+    </div>
+      {{yearly-salary output=yearly monthly=salary}}
+     <button class="save add pull-left" {{action 'save'}}>Add/Save</button>
+     <button class="cancel pull-right" {{action 'cancel'}}>Cancel</button>
   </div>
-  <div>
-    Monthly Salary:
-    {{input value=salary placeholder="$XX,000" classNames="salary"}}
+  <div class="col-sm-6 select-screen">
+    {{#each model as |employment|}}
+    <div {{bind-attr class=":employment employment.active:active"}}>
+      <div class="name pull-left">{{employment.name}}</div>
+      <div class="delete-button pull-right"> <a {{action 'delete' employment}} class="delete">delete</a></div>
+      <div class="edit-button pull-right"> <a {{action 'edit' employment}} class="edit">edit</a></div>
+      <div class="salary pull-right">{{employment.salary}}</div>
+    </div>
+    {{/each}}
   </div>
-    {{yearly-salary output=yearly monthly=salary}}
-   <button class="save add pull-left" {{action 'save'}}>Add/Save</button>
-   <button class="cancel pull-right" {{action 'cancel'}}>Cancel</button>
-</div>
-<div class="half select-screen pull-right">
-  {{#each model as |employment|}}
-  <div {{bind-attr class=":employment employment.active:active"}}>
-    <div class="name pull-left">{{employment.name}}</div>
-    <div class="delete-button pull-right"> <a {{action 'delete' employment}} class="delete">delete</a></div>
-    <div class="edit-button pull-right"> <a {{action 'edit' employment}} class="edit">edit</a></div>
-    <div class="salary pull-right">{{employment.salary}}</div>
-  </div>
-  {{/each}}
 </div>

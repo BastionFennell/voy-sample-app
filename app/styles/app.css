@@ -27,6 +27,57 @@
   background-color: lightgreen;
 }
 
+.logo {
+  background-image: url("images/buoy.png");
+  width: 100px;
+  height: 100px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.title-words {
+  text-align: left;
+}
+
+.title-words .name h1 {
+  font-weight: bold;
+}
+
+.title-words .tagline h2 {
+  font-style: italic;
+  font-size: 20px;
+}
+
+
+.page-header {
+  text-align: center;
+  font-weight: bold;
+}
+
+.finance-table {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.finance-row {
+  clear: both;
+}
+
+
+.edit-screen, .select-screen {
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  height: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.select-screen .delete-button, .select-screen .edit-button, .select-screen .salary {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
 /*Keep footer at bottom, courtesy of CSSReset.com*/
 
 html, body {
@@ -46,7 +97,8 @@ html, body {
 }
 
 #content {
-  padding-bottom: 50px;
+  padding-bottom: 75px;
+  position: relative;
 }
 
 #footer {
