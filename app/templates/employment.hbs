@@ -4,12 +4,13 @@
 <div class="half edit-screen pull-left">
   <div>
     Name of income source:
-    <input placeholder="Feel Good Inc" class="name">
+    {{input value=name placeholder="Feel Good Inc." classNames="name"}}
   </div>
   <div>
     Monthly Salary:
-    <input placeholder="$XX,000" class="salary">
+    {{input value=salary placeholder="$XX,000" classNames="salary"}}
   </div>
+    {{yearly-salary valueBinding=yearly monthlyBinding=salary}}
   <button class="add">Add/Save</button>
 </div>
 <div class="half select-screen pull-right">
