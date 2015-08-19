@@ -13,19 +13,19 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{yearly-salary}}`);
 
-  assert.equal(this.$().text().trim(), 'Yearly Salary: 0');
+  assert.equal(this.$().text().trim(), 'Yearly Salary: $0.00');
 });
 
 test('it correctly converts to yearly salary if it is an integer', function(assert) {
   this.render(hbs`{{yearly-salary monthly=10}}`);
 
-  assert.equal(this.$().text().trim(), 'Yearly Salary: 120');
+  assert.equal(this.$().text().trim(), 'Yearly Salary: $120.00');
 });
 
 test('it correctly converts to yearly salary if it is a string', function(assert) {
   this.render(hbs`{{yearly-salary monthly="10"}}`);
 
-  assert.equal(this.$().text().trim(), 'Yearly Salary: 120');
+  assert.equal(this.$().text().trim(), 'Yearly Salary: $120.00');
 });
 
 test('it displays an error if the yearly salary is not a number', function(assert) {
@@ -37,11 +37,11 @@ test('it displays an error if the yearly salary is not a number', function(asser
 test('it correctly converts to yearly salary if it has a dollar sign', function(assert) {
   this.render(hbs`{{yearly-salary monthly="$10"}}`);
 
-  assert.equal(this.$().text().trim(), 'Yearly Salary: 120');
+  assert.equal(this.$().text().trim(), 'Yearly Salary: $120.00');
 });
 
 test('it correctly converts to yearly salary if it has a dollar sign and commas', function(assert) {
   this.render(hbs`{{yearly-salary monthly="$10,000"}}`);
 
-  assert.equal(this.$().text().trim(), 'Yearly Salary: 120000');
+  assert.equal(this.$().text().trim(), 'Yearly Salary: $120,000.00');
 });

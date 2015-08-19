@@ -34,6 +34,6 @@ export default Ember.Component.extend({
       return parts.join(".");
     }
 
-    return numberWithCommas(yearly);
+    return "$" + numberWithCommas(yearly);
   }.property("monthly")
 });

@@ -33,7 +33,7 @@ export default Ember.Controller.extend({
         currentEmployment.set("name", this.get("name"));
         currentEmployment.set("salary", this.get("salary"));
         currentEmployment.save().then(function(){
-          this.get("currentEmployment").set("active", false);
+          self.get("currentEmployment").set("active", false);
           self.set("currentEmployment", null);
           self.set("name", "");
           self.set("salary", "");
