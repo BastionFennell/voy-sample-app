@@ -37,13 +37,15 @@ test('Editing an employment', function(assert){
     click($(".employment .edit")[0]);
 
     andThen(function() {
-      assert.equal($('input.name').val, 'Student');
+      assert.equal($('input.name').val(), 'Undergraduate Student');
 
-      $('.input.name').val("Undergraduate Student");
-      click("button.save");
+      fillIn("input.name", "Student");
+      andThen(function(){
+        click("button.save");
 
-      andThen(function() {
-        assert.equal($(".employment .name")[0].text, "Undergraduate Student");
+        andThen(function() {
+          assert.equal($(".employment .name:first").text(), "Student");
+        });
       });
     });
   });
@@ -53,16 +55,18 @@ test('Adding an employment', function(assert){
   visit('/employment');
 
   andThen(function() {
-    $("input.name").val("Graduate Student");
-    $("input.salary").val("120000");
-    click($(".add"));
+    fillIn("input.name", "Graduate Student");
+    fillIn("input.salary", "120000");
+    andThen(function(){
+      click($(".add"));
 
-    andThen(function() {
-      assert.equal($('input.name').val, '');
+      andThen(function() {
+        assert.equal($('input.name').val(), '');
 
-      assert.equal($('.employment').length, 3);
+        assert.equal($('.employment').length, 3);
 
-      assert.equal($(".employment .name")[2].text, "Graduate Student");
+        assert.equal($(".employment .name:nth(2)").text(), "Graduate Student");
+      });
     });
   });
 });
